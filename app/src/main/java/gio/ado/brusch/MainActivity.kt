@@ -17,6 +17,8 @@ import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
 import java.lang.StringBuilder
 
+
+//https://www.youtube.com/watch?v=evI1UTL4RDE&ab_channel=IsaiasCuvula
 class MainActivity : AppCompatActivity() {
 
     private val personalCollectionRef = Firebase.firestore.collection("babbo")

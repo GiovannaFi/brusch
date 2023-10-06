@@ -8,41 +8,71 @@
 
     <EditText
         android:id="@+id/edt_cuteMessage"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Inserisci un messaggio carino"
-        app:layout_constraintBottom_toTopOf="@+id/btn_save_cuteMessage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
 
     <Button
         android:id="@+id/btn_save_cuteMessage"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="invia"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/cute_messages_list"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_save_cuteMessage" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_cuteMessage"
+        app:layout_constraintEnd_toStartOf="@+id/btn_retrieve_cuteMessage"
+        app:layout_constraintHorizontal_bias="0.5" />
 
     <Button
         android:id="@+id/btn_retrieve_cuteMessage"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="ottieni"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_cuteMessage"
+        app:layout_constraintStart_toEndOf="@+id/btn_save_cuteMessage"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <TextView
+        android:id="@+id/cute_messages_list"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cute_messages_list" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_save_cuteMessage"
+        app:layout_constraintHorizontal_bias="0.5" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/cute_messages_list"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/btn_camera"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Camera"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/btn_gallery"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <Button
+        android:id="@+id/btn_gallery"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Gallery"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/btn_camera"
+        app:layout_constraintHorizontal_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
